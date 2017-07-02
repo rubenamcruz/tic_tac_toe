@@ -9,3 +9,9 @@ To run the game on linux we simply need to run the command
 
 ./run.sh
 
+and go to the
+
+localhost:5000/
+
+to get to the site.
+
