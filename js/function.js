@@ -3,16 +3,13 @@ function start_game() {
 
 }
 
-//todo-ruben: fix diagonal winning 2
-
 var my_area = {
     canvas : document.getElementById("tic_tac_toe_canvas"),
     start : function(){
-        console.log("start");
         this.canvas.width = 410;
         this.canvas.height = 410;
         this.context = this.canvas.getContext("2d");
-        horizontal_bar1 = new bar(400, 10, "black",5, 130);
+        this.horizontal_bar1 = new bar(400, 10, "black",5, 130);
         this.horizontal_bar2 = new bar(400, 10, "black",5, 260);
         this.vertical_bar1 = new bar(10, 400, "black",130, 5);
         this.vertical_bar2 = new bar(10, 400, "black",260, 5);
@@ -20,7 +17,6 @@ var my_area = {
         this.turn = 1;
         this.filling = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
         this.canvas.addEventListener('click', function(event) {
-            console.log(my_area.turn);
             var x = event.pageX;
             var y = event.pageY;
             positions = area(x, y);
@@ -29,7 +25,7 @@ var my_area = {
     },
     clear : function(){
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        horizontal_bar1 = new bar(400, 10, "black",5, 130);
+        this.horizontal_bar1 = new bar(400, 10, "black",5, 130);
         this.horizontal_bar2 = new bar(400, 10, "black",5, 260);
         this.vertical_bar1 = new bar(10, 400, "black",130, 5);
         this.vertical_bar2 = new bar(10, 400, "black",260, 5);
