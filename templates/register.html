@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe - New User</title>
+</head>
+<body>
+
+<font color="red">
+    {{message}}
+</font>
+
+<form method="POST" action="/register">
+    {{ form.csrf_token }}
+    {{ form.username.label }}: <br> {{ form.username(size=20) }} <br>
+    {{ form.password.label }}: <br> {{ form.password(size=20) }} <br>
+    {{ form.repeat_password.label }}: <br> {{ form.repeat_password(size=20) }} <br>
+    <input type="submit" value="Register">
+</form>
+
+</body>
+</html>

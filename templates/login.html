@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe - login</title>
+</head>
+<body>
+
+<font color="red">
+    {{message}}
+</font>
+
+<form method="POST" action="/login">
+    {{ form.csrf_token }}
+    {{ form.username.label }}: <br> {{ form.username(size=20) }} <br>
+    {{ form.password.label }}: <br> {{ form.password(size=20) }} <br>
+    <input type="submit" value="Login">
+</form>
+
+</body>
+</html>

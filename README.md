@@ -7,7 +7,7 @@ you need to have python3.6 installed and flask to run this application
 
 To run the game on linux we simply need to run the command
 
-./run.sh
+./python app.py
 
 and go to the
 
